@@ -1,6 +1,6 @@
 from flask import Flask
 
-# create flask app
+
 app = Flask(__name__)
 
 courses = ['FCN',
@@ -12,12 +12,14 @@ courses = ['FCN',
             'CYBER FORENSICS',
            ' COMPLIANCE AUDIT', 
            ' APPTITUDE and EFFECTIVE COMMUNICATION' ]
+
+
 naam = [ 'Name : Md Saif Ali' , 'Course : PG-DITISS', ' PRN : 230344223027', 'PHONE NUMBER : 9934141981']
-# add all the routes
+
 
 @app.route("/", methods=["GET"])
 def root():
-    return "welcome to ITIL EXAM"
+    return "<h1>welcome to ITIL EXAM</h1>"
 
 @app.route("/modules", methods=["GET"])
 def get_list():
@@ -29,5 +31,4 @@ def name():
 
 
 
-# run the application
 app.run(host="0.0.0.0", port=4000, debug=True)
